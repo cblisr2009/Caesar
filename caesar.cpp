@@ -72,14 +72,22 @@ if(doc->ErrorID() == 0)
         
          std::cout<< pRoot->FirstChildElement("ACT")->FirstChildElement("SCENE")->FirstChildElement("TITLE")->NextSiblingElement("SPEECH")->FirstChildElement("LINE")->GetText()<<std::endl;
         
-//         std::cout<< pRoot->FirstChildElement("ACT")->FirstChildElement("SCENE")->FirstChildElement("TITLE")->NextSiblingElement("SPEECH")->NextSiblingElement("LINE")->GetText()<<std::endl;
-//    }
+         std::cout<< pRoot->FirstChildElement("ACT")->FirstChildElement("SCENE")->FirstChildElement("TITLE")->NextSiblingElement("SPEECH")->FirstChildElement("LINE")->NextSiblingElement()->GetText()<<std::endl;
+        
+            std::cout<< pRoot->FirstChildElement("ACT")->FirstChildElement("SCENE")->FirstChildElement("TITLE")->NextSiblingElement("SPEECH")->FirstChildElement("LINE")->NextSiblingElement()->NextSiblingElement()->GetText()<<std::endl;
+        
+         std::cout<< pRoot->FirstChildElement("ACT")->FirstChildElement("SCENE")->FirstChildElement("TITLE")->NextSiblingElement("SPEECH")->FirstChildElement("LINE")->NextSiblingElement()->NextSiblingElement()->NextSiblingElement()->GetText()<<std::endl;
+        
+            std::cout<< pRoot->FirstChildElement("ACT")->FirstChildElement("SCENE")->FirstChildElement("TITLE")->NextSiblingElement("SPEECH")->FirstChildElement("LINE")->NextSiblingElement()->NextSiblingElement()->NextSiblingElement()->NextSiblingElement()->GetText()<<std::endl;
+        
+//        std::cout<<pRoot->FirstChildElement("ACT")->FirstChildElement("SCENE")->FirstChildElement("TITLE")->FirstChildElement("SPEAKER")->FirstChildElement("SPEAKER")->NextSiblingElement("SPEECH")->GetText()<<std::endl;
+    }
        
 //then when trying to reach further, not necessarily always this way but i will always get the Title and then I will get segmentation fault
     
     return 0;
 }
-}
+
         
     
 
